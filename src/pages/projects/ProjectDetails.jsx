@@ -224,6 +224,27 @@ const ProjectDetail = () => {
                             </div>
                         </div>
 
+                        {/* Completion Progress */}
+                        <div className="mt-4">
+                            <div className="flex items-center justify-between mb-1">
+                                <span className="text-sm text-gray-500">
+                                    Project Progress
+                                </span>
+                                <span className="text-sm font-medium text-gray-700">
+                                    {project.completionPercentage}%
+                                </span>
+                            </div>
+                            <div className="w-full bg-gray-100 rounded-full h-2.5">
+                                <div
+                                    className="bg-blue-600 h-2.5 rounded-full transition-all"
+                                    style={{ width: `${project.completionPercentage}%` }}
+                                />
+                            </div>
+                            <p className="text-xs text-gray-400 mt-1">
+                                {project.completedTasks}/{project.totalTasks} tasks completed
+                            </p>
+                        </div>
+                        
                         {/* Action Buttons */}
                         <div className="flex gap-2 ml-4">
                             {!isOwner && (

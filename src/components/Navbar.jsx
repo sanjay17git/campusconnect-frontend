@@ -41,11 +41,14 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* User Info + Logout */}
+                {/* User Info + Profile + Logout */}
                 <div className="flex items-center gap-4">
-                    <span className="text-sm text-gray-600">
+                    <button
+                        onClick={() => navigate('/profile')}
+                        className="text-sm text-gray-600 
+                            hover:text-blue-600 font-medium">
                         👋 {user?.name}
-                    </span>
+                    </button>
                     <button
                         onClick={handleLogout}
                         className="text-sm text-red-500 

@@ -7,6 +7,7 @@ import CreateProject from './pages/projects/CreateProject'
 import ProjectList from './pages/projects/ProjectList'
 import ProjectDetail from './pages/projects/ProjectDetails'
 import MyTasks from './pages/tasks/MyTasks'
+import Profile from './pages/Profile'
 function App() {
     return (
         <Routes>
@@ -35,6 +36,9 @@ function App() {
             } />
             <Route path="/my-tasks" element={
             <ProtectedRoute><MyTasks /></ProtectedRoute>
+            } />
+            <Route path="/profile" element={
+            <ProtectedRoute><Profile /></ProtectedRoute>
             } />
              <Route path="*" element={<Navigate to="/dashboard" />} />
         </Routes>

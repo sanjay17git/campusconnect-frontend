@@ -43,6 +43,21 @@ const ProjectCard = ({ project, onLike, onClick }) => {
                 </div>
             )}
 
+            {/* Progress Bar */}
+            <div className="mb-3">
+                <div className="flex justify-between text-xs 
+                    text-gray-400 mb-1">
+                    <span>Progress</span>
+                    <span>{project.completionPercentage}%</span>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-1.5">
+                    <div
+                        className="bg-blue-500 h-1.5 rounded-full"
+                        style={{ width: `${project.completionPercentage}%` }}
+                    />
+                </div>
+            </div>
+            
             {/* Footer */}
             <div className="flex items-center justify-between 
                 border-t border-gray-100 pt-3">
